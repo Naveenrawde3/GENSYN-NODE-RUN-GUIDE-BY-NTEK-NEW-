@@ -1,24 +1,11 @@
 # GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-
 
-Here’s a clean and professional **`README.md`** for the Gensyn node setup, based on your detailed instructions:
 
----
-
-````markdown
-# 🧠 Gensyn RL Swarm Node Setup Guide
-
-> Created by **mrr_bear**  
-> Follow this guide **carefully** to run a Gensyn node without errors.
-
----
+1. **Download and send the script to your VPS home folder: DOWNLOAD FILE IN TELEGRAM & DRAG &DROP LOCAL PC TO VPS (SFTR) FOLDER
 
 ## 📦 Prerequisites
 
 ### ✅ Docker Installation
-
-1. **Download and send the script to your VPS home folder:**
-
-👉 [Download `install_docker_full.sh`](https://drive.google.com/file/d/1gEREknqEDL2kjtHba21FwZK2NeY1jisU/view?usp=drive_link)
 
 2. **Install required tools and fix file format:**
 ```bash
@@ -57,6 +44,12 @@ docker ps
 sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof
 ```
 
+### 🐍 Check Python Version
+
+```bash
+python3 --version
+```
+
 ### Step 2: Install Node.js and Yarn
 
 ```bash
@@ -67,6 +60,14 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list > /dev/null
 sudo apt update && sudo apt install -y yarn
 ```
+
+### ✅ Check Versions
+
+```bash
+node -v
+npm -v
+yarn -v
+````
 
 ### Step 3: Clone the repository and enter a screen session
 
@@ -81,10 +82,7 @@ screen -S swarm
 cd rl-swarm
 python3 -m venv .venv
 source .venv/bin/activate
-
 cd modal-login
-yarn install
-yarn upgrade && yarn add next@latest viem@latest
 cd ..
 
 git switch main
@@ -97,6 +95,7 @@ pip freeze
 ```
 
 ### Step 5: Place your `swarm.pem` file in the `rl-swarm` folder.
+
 
 ### Step 6: Start the swarm
 
@@ -132,11 +131,13 @@ chmod +x backup.sh && ./backup.sh
 
 ## ⚙️ Troubleshooting
 
-### 🔧 Solution 1: Increase daemon timeout
+### 🔧 Solution 1: 
+Reinstall correct Python libraries
 
 ```bash
-sed -i 's/startup_timeout: float = *15/startup_timeout: float = 300/' ~/rl-swarm/.venv/lib/python3.12/site-packages/hivemind/p2p/p2p_daemon.py
-./run_rl_swarm.sh
+pip install --force-reinstall transformers==4.51.3 trl==0.19.1
+pip freeze
+bash run_rl_swarm.sh
 ```
 
 ### 🔧 Solution 2: Fix reward tensor error
@@ -155,22 +156,15 @@ source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
 
-### 🔧 Solution 4: Reinstall correct Python libraries
+### 🔧 Solution 4: Increase daemon timeout
 
 ```bash
-pip install --force-reinstall transformers==4.51.3 trl==0.19.1
-pip freeze
-bash run_rl_swarm.sh
+sed -i 's/startup_timeout: float = *15/startup_timeout: float = 300/' ~/rl-swarm/.venv/lib/python3.12/site-packages/hivemind/p2p/p2p_daemon.py
+./run_rl_swarm.sh
 ```
 
 ---
 
 ## 🚀 You're Done!
 
-If you've followed all the steps, your Gensyn node should be up and running!
-Join the community and monitor your swarm for any updates.
-
-```
-
-Would you like me to create this as an actual `README.md` file you can download or commit to GitHub?
-```
+## JOIN TELEGRAM CHANNAL : https://t.me/ntekearning2
