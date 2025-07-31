@@ -1,5 +1,36 @@
-# GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-
+# GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW- 💖💖
 
+## Node Management**
+  
+## 🔄 Inter Gensyn Screen :
+
+```bash
+screen -r gensyn
+```
+
+## Check screen sessions :
+
+```bash
+screen -ls
+```
+
+## Reattach to screen session :
+
+```bash
+screen -r
+```
+
+## Delete a screen session :
+
+```bash
+screen -S 65432.gensyn -X quit
+```
+
+### Remove existing swarm directory:
+
+```bash
+rm -rf rl-swarm
+```
 
 1. **Download and send the script to your VPS home folder: DOWNLOAD FILE IN TELEGRAM & DRAG &DROP LOCAL PC TO VPS (SFTR) FOLDER
 
