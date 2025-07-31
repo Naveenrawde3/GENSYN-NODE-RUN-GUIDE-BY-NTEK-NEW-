@@ -45,17 +45,17 @@ dos2unix install_docker_full.sh
 chmod +x install_docker_full.sh
 ````
 
-3. **Add user to Docker group:**
+3. **Run the Docker installer:**
+
+```bash
+./install_docker_full.sh
+```
+
+4. **Add user to Docker group:**
 
 ```bash
 sudo usermod -aG docker $USER
 exec su -l $USER
-```
-
-4. **Run the Docker installer:**
-
-```bash
-./install_docker_full.sh
 ```
 
 5. **Test Docker:**
