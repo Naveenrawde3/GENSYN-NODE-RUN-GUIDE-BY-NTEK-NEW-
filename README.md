@@ -94,7 +94,11 @@ pip install --force-reinstall transformers==4.51.3 trl==0.19.1
 pip freeze
 ```
 
-### Step 5: Place your `swarm.pem` file in the `rl-swarm` folder.
+### 5. Drop File (Local PC - Termius PC)
+
+ • Drop Your swarm.pem File - Local PC To Terminus PC
+ 
+![17489820394627516665887876140114](https://github.com/user-attachments/assets/06fde5a8-fa7f-42ab-851c-81e69ff37bf3)
 
 
 ### Step 6: Start the swarm
