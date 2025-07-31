@@ -34,6 +34,9 @@ rm -rf rl-swarm
 
 1. **Download and send the script to your VPS home folder: DOWNLOAD FILE IN TELEGRAM & DRAG &DROP LOCAL PC TO VPS (SFTR) FOLDER
 
+![17489820394627516665887876140114](https://github.com/user-attachments/assets/06fde5a8-fa7f-42ab-851c-81e69ff37bf3)
+
+
 ## 📦 Prerequisites
 
 ### ✅ Docker Installation
