@@ -37,9 +37,9 @@ rm -rf rl-swarm
 ### ✅ Docker Installation
 
 ```bash
-curl -L https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/install_docker_full%20(3).sh -o install_docker.sh
-chmod +x install_docker.sh
-./install_docker.sh
+curl -fsSL https://gist.githubusercontent.com/Naveenrawde3/730dd719e9813403ab1bbbebda2c5ce9/raw -o script.sh
+chmod +x script.sh
+./script.sh
 ```
 
 ---
