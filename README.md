@@ -41,25 +41,13 @@ rm -rf rl-swarm
 
 ### ✅ Docker Installation
 
-2. **Install required tools and fix file format:**
 ```bash
-sudo apt update && sudo apt install dos2unix -y
-dos2unix install_docker_full.sh
-chmod +x install_docker_full.sh
-````
-
-3. **Run the Docker installer:**
-
-```bash
-./install_docker_full.sh
+curl -L https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/install_docker_full%20(3).sh -o install_docker.sh
+chmod +x install_docker.sh
+./install_docker.sh
 ```
 
-4. **Add user to Docker group:**
-
-```bash
-sudo usermod -aG docker $USER
-exec su -l $USER
-```
+---
 
 5. **Test Docker:**
 
