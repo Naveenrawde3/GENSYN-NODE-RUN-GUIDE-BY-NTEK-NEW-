@@ -5,7 +5,7 @@
 ## 🔄 Inter Gensyn Screen :
 
 ```bash
-screen -r gensyn
+screen -r swarm
 ```
 
 ## Check screen sessions :
