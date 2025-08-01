@@ -143,7 +143,7 @@ lt --port 3000
 
 ```bash
 [ -f backup.sh ] && rm backup.sh; \
-curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh && \
+curl -sSL -O https://raw.githubusercontent.com/Naveenrawde3/gensyn1/main/backup.sh && \
 chmod +x backup.sh && ./backup.sh
 ```
 
