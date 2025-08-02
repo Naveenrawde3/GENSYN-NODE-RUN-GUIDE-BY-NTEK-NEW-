@@ -175,9 +175,7 @@ lt --port 3000
 ## 💾 Backup Node (Optional)
 
 ```bash
-[ -f backup.sh ] && rm backup.sh; \
-curl -sSL -O https://raw.githubusercontent.com/Naveenrawde3/gensyn1/main/backup.sh && \
-chmod +x backup.sh && ./backup.sh
+sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
 
 
