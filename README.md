@@ -1,6 +1,6 @@
 # GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW- 💖💖
 
-## 📦 Prerequisites
+## 📦 Prerequisites  (SHORT COMMAND)  
 
 ### 1. ✅ Docker Installation
 
@@ -65,7 +65,7 @@ kill
 rm -rf rl-swarm
 ```
 
-## 📦 Prerequisites
+## 📦 Prerequisites  (LONG COMMAND)
 
 ### ✅ Docker Installation
 
