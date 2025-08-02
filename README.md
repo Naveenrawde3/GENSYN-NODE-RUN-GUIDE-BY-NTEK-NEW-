@@ -179,6 +179,7 @@ lt --port 3000
 curl -sSL -O https://raw.githubusercontent.com/Naveenrawde3/gensyn1/main/backup.sh && \
 chmod +x backup.sh && ./backup.sh
 ```
+```
 
 ---
 
