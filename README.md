@@ -32,6 +32,11 @@ sudo npm install -g localtunnel
 lt --port 3000
 ```
 
+## 💾 Backup Node :
+
+```bash
+sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
+```
 
 ## Node Management**
   
@@ -172,7 +177,7 @@ lt --port 3000
 
 ---
 
-## 💾 Backup Node (Optional)
+## 💾 Backup Node :
 
 ```bash
 sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
