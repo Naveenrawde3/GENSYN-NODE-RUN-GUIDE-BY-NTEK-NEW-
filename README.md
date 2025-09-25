@@ -2,6 +2,14 @@
 
 ## 📦 Prerequisites  (SHORT COMMAND)  
 
+```bash
+cd rl-swarm
+rm -rf .venv
+python3 -m venv .venv
+source .venv/bin/activate
+./run_rl_swarm.sh
+```
+
 ### 1. ✅ Docker Installation
 
 ```bash
