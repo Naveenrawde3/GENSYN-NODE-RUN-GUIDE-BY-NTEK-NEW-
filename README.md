@@ -2,8 +2,7 @@
 
 ## 📦 Prerequisites  (SHORT COMMAND)  
 
-
-### 1. INCREASE SPACE :
+### 1. ✅ Increase Space :
 
 ```bash
 sudo fallocate -l 32G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile && 
