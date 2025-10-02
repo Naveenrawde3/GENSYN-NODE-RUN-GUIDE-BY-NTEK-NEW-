@@ -51,6 +51,13 @@ sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install 
 cd rl-swarm && git describe --tags
 ```
 
+## UPDATE NODE :
+```bash
+cd rl-swarm
+rm -rf .venv && git pull && python3 -m venv .venv && source .venv/bin/activate
+./run_rl_swarm.sh
+```
+
 ## Node Management**
   
 ## 🔄 Inter Gensyn Screen :
