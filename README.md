@@ -43,6 +43,14 @@ lt --port 3000
 sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
 
+### UPDATE YOUR NODE :
+
+## CHECK VERSION : 
+
+```bash
+cd rl-swarm && git describe --tags
+```
+
 ## Node Management**
   
 ## 🔄 Inter Gensyn Screen :
