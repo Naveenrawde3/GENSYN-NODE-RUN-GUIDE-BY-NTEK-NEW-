@@ -19,7 +19,48 @@ curl -fsSL https://gist.github.com/Naveenrawde3/730dd719e9813403ab1bbbebda2c5ce9
 ## 3. 🧠  Gensyn RL Swarm Node Installation
 
 ```bash
-sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof && python3 --version && curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt install -y nodejs && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list > /dev/null && sudo apt update && sudo apt install -y yarn && node -v && npm -v && yarn -v && rm -rf rl-swarm && git clone https://github.com/gensyn-ai/rl-swarm.git && screen -S swarm -dm bash -c "cd rl-swarm && python3 -m venv .venv && source .venv/bin/activate && cd modal-login && cd .. && git switch main && git reset --hard && git clean -fd && git pull origin main && pip install --force-reinstall transformers==4.51.3 trl==0.19.1 && pip freeze && echo '⚠️ 20 seconds pause: Please upload your swarm.pem file...' && sleep 20 && ./run_rl_swarm.sh" && sleep 2 && screen -r swarm
+# Install base tools
+sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof gpg
+
+# Check Python version
+python3 --version
+
+# Install Node.js from NodeSource
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Install Yarn without apt-key (Ubuntu 24.04+ fix)
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarn-archive-keyring.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/yarn-archive-keyring.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list > /dev/null
+sudo apt update
+sudo apt install -y yarn
+
+# Check versions
+node -v && npm -v && yarn -v
+
+# Clone Gensyn swarm repo
+rm -rf rl-swarm && git clone https://github.com/gensyn-ai/rl-swarm.git
+
+# Start screen session with environment setup
+screen -S swarm -dm bash -c "
+cd rl-swarm && \
+python3 -m venv .venv && \
+source .venv/bin/activate && \
+cd modal-login && cd .. && \
+git switch main && \
+git reset --hard && \
+git clean -fd && \
+git pull origin main && \
+pip install --upgrade pip && \
+pip install --force-reinstall transformers==4.51.3 trl==0.19.1 && \
+pip freeze && \
+echo '⚠️ 20 seconds pause: Please upload your swarm.pem file...' && \
+sleep 20 && \
+./run_rl_swarm.sh
+"
+
+# Wait then attach to screen
+sleep 2 && screen -r swarm
 
 ```
 
