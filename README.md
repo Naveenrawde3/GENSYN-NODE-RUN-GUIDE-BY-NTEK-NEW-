@@ -112,6 +112,10 @@ cd rl-swarm && git describe --tags
 screen -r swarm
 ```
 
+```bash
+screen -r gensyn
+```
+
 ## Check screen sessions :
 
 ```bash
