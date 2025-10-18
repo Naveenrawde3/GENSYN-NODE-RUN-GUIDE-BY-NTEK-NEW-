@@ -88,17 +88,20 @@ sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install 
 
 ### 7. UPDATE YOUR NODE :
 
-## CHECK VERSION : 
-
 ```bash
-cd rl-swarm && git describe --tags
+screen -S gensyn
 ```
 
-## 8. UPDATE NODE :
 ```bash
 cd rl-swarm
 rm -rf .venv && git pull && python3 -m venv .venv && source .venv/bin/activate
 ./run_rl_swarm.sh
+```
+
+## CHECK VERSION : 
+
+```bash
+cd rl-swarm && git describe --tags
 ```
 
 ## 9. NODE MANAGMENT :
