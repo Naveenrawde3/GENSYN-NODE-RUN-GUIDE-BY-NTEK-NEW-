@@ -88,34 +88,10 @@ lt --port 3000
 sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
 
-### 7. UPDATE YOUR NODE :
-
-```bash
-screen -S gensyn
-```
-
-```bash
-cd rl-swarm
-rm -rf .venv && git pull && python3 -m venv .venv && source .venv/bin/activate
-./run_rl_swarm.sh
-```
-
 ## CHECK VERSION : 
 
 ```bash
 cd rl-swarm && git describe --tags
-```
-
-## 9. NODE MANAGMENT :
-  
-## 🔄 Inter Gensyn Screen :
-
-```bash
-screen -r swarm
-```
-
-```bash
-screen -r gensyn
 ```
 
 ## Check screen sessions :
@@ -130,50 +106,10 @@ screen -ls
 screen -r
 ```
 
-## Delete a screen session :
-
-```bash
-kill
-```
-
 ### Remove existing swarm directory:
 
 ```bash
 rm -rf rl-swarm
-```
-
-## ⚙️ Troubleshooting
-
-### 🔧 Solution 1: 
-Reinstall correct Python libraries
-
-```bash
-pip install --force-reinstall transformers==4.51.3 trl==0.19.1
-pip freeze
-bash run_rl_swarm.sh
-```
-
-### 🔧 Solution 2: Fix reward tensor error
-
-```bash
-sed -i 's/rewards = torch.tensor(rewards)/rewards = torch.tensor([[r, 0.0] if isinstance(r, (int, float)) else r for r in rewards])/g' .venv/lib/python3.12/site-packages/genrl/trainer/grpo_trainer.py
-./run_rl_swarm.sh
-```
-
-### 🔧 Solution 3: Reset virtual environment
-
-```bash
-rm -rf .venv
-python3 -m venv .venv
-source .venv/bin/activate
-./run_rl_swarm.sh
-```
-
-### 🔧 Solution 4: Increase daemon timeout
-
-```bash
-sed -i 's/startup_timeout: float = *15/startup_timeout: float = 300/' ~/rl-swarm/.venv/lib/python3.12/site-packages/hivemind/p2p/p2p_daemon.py
-./run_rl_swarm.sh
 ```
 
 ---
