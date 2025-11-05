@@ -112,6 +112,8 @@ screen -r
 rm -rf rl-swarm
 ```
 
+### Fix Problem :
+
 ```bash
 screen -S gensyn
 ```
