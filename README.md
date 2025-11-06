@@ -120,9 +120,6 @@ screen -S gensyn
 
 ```bash
 cd rl-swarm
-```
-
-```bash
 git switch main
 git reset --hard
 git clean -fd
