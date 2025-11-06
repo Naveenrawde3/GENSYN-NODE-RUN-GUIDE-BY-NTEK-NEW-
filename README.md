@@ -120,7 +120,34 @@ screen -S gensyn
 
 ```bash
 cd rl-swarm
- python3 -m venv .venv
+```
+
+```bash
+git switch main
+git reset --hard
+git clean -fd
+git pull origin main
+```
+
+```bash
+git stash && git pull
+```
+
+```bash
+sudo rm rgym_exp/src/manager.py
+```
+
+```bash
+sudo apt update
+sudo apt install nano -y
+```
+
+```bash
+nano rgym_exp/src/manager.py
+```
+
+```bash
+python3 -m venv .venv
 source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
