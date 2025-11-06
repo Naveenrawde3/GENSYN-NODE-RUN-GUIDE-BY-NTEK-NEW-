@@ -126,7 +126,9 @@ git pull origin main
 ```bash
 git stash && git pull && sudo rm -f rgym_exp/src/manager.py && sudo apt update -y && sudo apt install -y nano && nano rgym_exp/src/manager.py
 ```
+
 6.  Cntr +X , Cntr +Y , Entre
+
 7.  
 ```bash
 python3 -m venv .venv
