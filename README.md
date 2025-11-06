@@ -86,13 +86,7 @@ lt --port 3000
 
 ```bash
 sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
-```
-
-## CHECK VERSION : 
-
-```bash
-cd rl-swarm && git describe --tags
-```
+``` 
 
 ## Check screen sessions :
 
@@ -128,17 +122,17 @@ git reset --hard
 git clean -fd
 git pull origin main
 ```
-
+4.
 ```bash
 git stash && git pull && sudo rm -f rgym_exp/src/manager.py && sudo apt update -y && sudo apt install -y nano && nano rgym_exp/src/manager.py
 ```
-
+6.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
-
+5.
 ```bash
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
