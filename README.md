@@ -114,10 +114,13 @@ rm -rf rl-swarm
 
 ### Fix Problem :
 
+1. Cntr +AD
+
+2. 
 ```bash
 screen -S gensyn
 ```
-
+3.
 ```bash
 cd rl-swarm
 git switch main
@@ -127,20 +130,7 @@ git pull origin main
 ```
 
 ```bash
-git stash && git pull
-```
-
-```bash
-sudo rm rgym_exp/src/manager.py
-```
-
-```bash
-sudo apt update
-sudo apt install nano -y
-```
-
-```bash
-nano rgym_exp/src/manager.py
+git stash && git pull && sudo rm -f rgym_exp/src/manager.py && sudo apt update -y && sudo apt install -y nano && nano rgym_exp/src/manager.py
 ```
 
 ```bash
