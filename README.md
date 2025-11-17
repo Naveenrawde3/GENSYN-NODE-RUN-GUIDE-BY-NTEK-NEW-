@@ -78,7 +78,8 @@ sleep 2 && screen -r swarm
 In a new terminal window:
 
 ```bash
-sudo npm install -g localtunnel
+echo "Tunnel Password (Public IP): $(curl -s ifconfig.me)" && \
+sudo npm install -g localtunnel && \
 lt --port 3000
 ```
 
