@@ -11,13 +11,6 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 
-### 2. ✅ Docker Installation
-
-```bash
-curl -fsSL https://gist.github.com/Naveenrawde3/730dd719e9813403ab1bbbebda2c5ce9/raw -o install_docker.sh && chmod +x install_docker.sh && ./install_docker.sh
-
-```
-
 ## 3. 🧠  Gensyn RL Swarm Node Installation
 
 ```bash
