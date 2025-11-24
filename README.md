@@ -11,7 +11,7 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 
-## 3. 🧠  Gensyn RL Swarm Node Installation
+## 2. 🧠  Gensyn RL Swarm Node Installation
 
 ```bash
 # Install base tools
@@ -36,7 +36,7 @@ node -v && npm -v && yarn -v
 # Clone Gensyn swarm repo
 rm -rf rl-swarm && git clone https://github.com/gensyn-ai/rl-swarm.git
 
-# Start screen session with environment setup
+# Start screen session with merged commands
 screen -S swarm -dm bash -c "
 cd rl-swarm && \
 python3 -m venv .venv && \
@@ -51,6 +51,13 @@ pip install --force-reinstall transformers==4.51.3 trl==0.19.1 && \
 pip freeze && \
 echo '⚠️ 20 seconds pause: Please upload your swarm.pem file...' && \
 sleep 20 && \
+(deactivate 2>/dev/null || true) && \
+rm -rf .venv && \
+git stash && \
+git pull && \
+python3 -m venv .venv && \
+source .venv/bin/activate && \
+bash run_rl_swarm.sh && \
 ./run_rl_swarm.sh
 "
 
@@ -59,14 +66,14 @@ sleep 2 && screen -r swarm
 
 ```
 
-### 4. Drop File (Local PC - Termius PC)
+### 3. Drop File (Local PC - Termius PC)
 
  • Drop Your swarm.pem File - Local PC To Terminus PC
  
 ![17489820394627516665887876140114](https://github.com/user-attachments/assets/06fde5a8-fa7f-42ab-851c-81e69ff37bf3)
 
 
-##  5. 🔐 Gensyn Login Instructions
+##  4. 🔐 Gensyn Login Instructions
 
 In a new terminal window:
 
@@ -76,7 +83,7 @@ sudo npm install -g localtunnel && \
 lt --port 3000
 ```
 
-##  6. 💾 Backup Node :
+##  5. 💾 Backup Node :
 
 ```bash
 sudo apt update && (sudo apt install -y netcat-openbsd lsof || sudo apt install -y netcat-traditional lsof) && curl -sSL -o backup.sh https://raw.githubusercontent.com/Naveenrawde3/GENSYN-NODE-RUN-GUIDE-BY-NTEK-NEW-/main/backup.sh && chmod +x backup.sh && ./backup.sh
